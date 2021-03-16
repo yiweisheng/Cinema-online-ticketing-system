@@ -1,0 +1,227 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0"
+         metadata-complete="true">
+
+<!--    Servlet-->
+<!--    登录-->
+    <!--    会员登录-->
+    <servlet>
+        <servlet-name>Customerlogin.do</servlet-name>
+        <servlet-class>com.yi.servlet.customer.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Customerlogin.do</servlet-name>
+        <url-pattern>/customerlogin.do</url-pattern>
+    </servlet-mapping>
+    <!--会员注册-->
+    <servlet>
+        <servlet-name>RegisteredServlet</servlet-name>
+        <servlet-class>com.yi.servlet.customer.RegisteredServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisteredServlet</servlet-name>
+        <url-pattern>/customerregistered.do</url-pattern>
+    </servlet-mapping>
+    <!--    重置密码-->
+    <servlet>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <servlet-class>com.yi.servlet.customer.ResetPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <url-pattern>/resetpassword.do</url-pattern>
+    </servlet-mapping>
+    <!--    会员注销-->
+    <servlet>
+        <servlet-name>CustomerLogoutServlet</servlet-name>
+        <servlet-class>com.yi.servlet.customer.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerLogoutServlet</servlet-name>
+        <url-pattern>/jsp/customerlogout.do</url-pattern>
+    </servlet-mapping>
+
+    <!--===========普通用户=============-->
+    <!--    影片列表操作-->
+    <servlet>
+        <servlet-name>MovieServlet</servlet-name>
+        <servlet-class>com.yi.servlet.movie.MovieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MovieServlet</servlet-name>
+        <url-pattern>/jsp/movie.do</url-pattern>
+    </servlet-mapping>
+    <!--    时间表列表操作-->
+    <servlet>
+        <servlet-name>ScheduleServlet</servlet-name>
+        <servlet-class>com.yi.servlet.schedule.ScheduleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ScheduleServlet</servlet-name>
+        <url-pattern>/jsp/schedule.do</url-pattern>
+    </servlet-mapping>
+    <!--    订单表列表操作-->
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.yi.servlet.order.OrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/jsp/order.do</url-pattern>
+    </servlet-mapping>
+    <!--    座位表列表操作-->
+    <servlet>
+        <servlet-name>SeatServlet</servlet-name>
+        <servlet-class>com.yi.servlet.seat.SeatServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SeatServlet</servlet-name>
+        <url-pattern>/jsp/seat.do</url-pattern>
+    </servlet-mapping>
+    <!--    会员表列表操作-->
+    <servlet>
+        <servlet-name>CustomerServlet</servlet-name>
+        <servlet-class>com.yi.servlet.customer.CustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerServlet</servlet-name>
+        <url-pattern>/jsp/customer.do</url-pattern>
+    </servlet-mapping>
+
+
+<!--===========管理员=============-->
+    <!--    影片列表操作-->
+    <servlet>
+        <servlet-name>AdminMovieServlet</servlet-name>
+        <servlet-class>com.yi.servlet.movie.MovieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminMovieServlet</servlet-name>
+        <url-pattern>/jsp/admin/movie.do</url-pattern>
+    </servlet-mapping>
+    <!--电影封面图片上传-->
+    <servlet>
+        <servlet-name>AdminFileServlet</servlet-name>
+        <servlet-class>com.yi.servlet.movie.FileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminFileServlet</servlet-name>
+        <url-pattern>/jsp/admin/upload.do</url-pattern>
+    </servlet-mapping>
+
+    <!--    时间表列表操作-->
+    <servlet>
+        <servlet-name>AdminScheduleServlet</servlet-name>
+        <servlet-class>com.yi.servlet.schedule.ScheduleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminScheduleServlet</servlet-name>
+        <url-pattern>/jsp/admin/schedule.do</url-pattern>
+    </servlet-mapping>
+    <!--    订单表列表操作-->
+    <servlet>
+        <servlet-name>AdminOrderServlet</servlet-name>
+        <servlet-class>com.yi.servlet.order.OrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminOrderServlet</servlet-name>
+        <url-pattern>/jsp/admin/order.do</url-pattern>
+    </servlet-mapping>
+    <!--    座位表列表操作-->
+    <servlet>
+        <servlet-name>AdminSeatServlet</servlet-name>
+        <servlet-class>com.yi.servlet.seat.SeatServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminSeatServlet</servlet-name>
+        <url-pattern>/jsp/admin/seat.do</url-pattern>
+    </servlet-mapping>
+    <!--    会员表列表操作-->
+    <servlet>
+        <servlet-name>AdminCustomerServlet</servlet-name>
+        <servlet-class>com.yi.servlet.customer.CustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminCustomerServlet</servlet-name>
+        <url-pattern>/jsp/admin/customer.do</url-pattern>
+    </servlet-mapping>
+
+<!--==============未登录用户=====================-->
+    <!--    影片列表操作-->
+    <servlet>
+        <servlet-name>NoLoginMovieServlet</servlet-name>
+        <servlet-class>com.yi.servlet.movie.MovieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NoLoginMovieServlet</servlet-name>
+        <url-pattern>/movie.do</url-pattern>
+    </servlet-mapping>
+    <!--    时间表列表操作-->
+    <servlet>
+        <servlet-name>NoLoginScheduleServlet</servlet-name>
+        <servlet-class>com.yi.servlet.schedule.ScheduleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NoLoginScheduleServlet</servlet-name>
+        <url-pattern>/schedule.do</url-pattern>
+    </servlet-mapping>
+
+    <!--    测试用请求-->
+    <servlet>
+        <servlet-name>DBimageTest</servlet-name>
+        <servlet-class>com.yi.servlet.test.DBImageServletTest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DBimageTest</servlet-name>
+        <url-pattern>/jsp/test/DBimageTest.do</url-pattern>
+    </servlet-mapping>
+
+<!--   filter -->
+    <!--    字符编码过滤器-->
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>com.yi.filter.CharacterEncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+<!--    用户登录过滤器-->
+    <filter>
+        <filter-name>SysFilter</filter-name>
+        <filter-class>com.yi.filter.SysFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SysFilter</filter-name>
+        <url-pattern>/jsp/*</url-pattern>
+    </filter-mapping>
+
+<!--    设置用户等级过滤-->
+<!--    管理员等级-->
+    <filter>
+        <filter-name>Admin</filter-name>
+        <filter-class>com.yi.filter.Admin</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Admin</filter-name>
+        <url-pattern>/jsp/admin/*</url-pattern>
+    </filter-mapping>
+
+
+    <!--    设置欢迎页面-->
+    <welcome-file-list>
+        <welcome-file>frame.jsp</welcome-file>
+    </welcome-file-list>
+
+<!--    默认Session过期时间-->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+</web-app>
